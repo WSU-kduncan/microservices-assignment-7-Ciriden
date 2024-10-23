@@ -1,7 +1,7 @@
 package com.wsu.ordermasterservice.controller;
 
-import com.wsu.ordermasterservice.DTO;
-import com.wsu.ordermasterservice.Service;
+import com.wsu.ordermasterservice.dto.Server.DTO;
+import com.wsu.ordermasterservice.service.ServerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,10 +10,10 @@ import java.util.List;
 
 // REST Controller for handling Server-related requests
 @RestController
-@RequestMapping("/api/servers")
+@RequestMapping("/servers")
+@RequiredArgsConstructor
 public class ServerController {
 
-    @Autowired
     private ServerService serverService;
 
     // GET: Retrieve all servers
