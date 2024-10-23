@@ -1,4 +1,4 @@
-package com.wsu.workorderproservice.controller;
+package com.wsu.ordermasterservice.controller;
 
 
 
@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthController {
     @GetMapping
     public ResponseEntity<String> healthCheck () {
-        return new ResponseEntity<String>("System UP", HttpStatus.OK);
+        return new ResponseEntity<String>("System UP: Health Response from my Order Master Application", HttpStatus.OK);
     }
 }
