@@ -1,4 +1,4 @@
-package com.wsu.ordermasterservice.DTO;
+package com.wsu.ordermasterservice.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
