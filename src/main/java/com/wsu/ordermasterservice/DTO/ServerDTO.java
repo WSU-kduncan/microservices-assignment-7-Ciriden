@@ -26,8 +26,5 @@ public class ServerDTO {
     @Size(max = 25)
     private String lastName;
 
-    
     private String availability;
-
-
 }
