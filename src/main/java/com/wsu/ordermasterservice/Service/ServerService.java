@@ -1,4 +1,4 @@
-package com.wsu.ordermasterservice.Service;
+package com.wsu.ordermasterservice.service;
 
 import com.example.servers.dto.ServerDTO;
 import com.example.servers.model.Server;
@@ -13,8 +13,7 @@ import java.util.Optional;
 @Service
 public class ServerService {
 
-    @Autowired
-    private ServerRepository serverRepository;
+    private final ServerRepository serverRepository;
 
     // Retrieve all servers
     public List<ServerDTO> getAllServers() {
