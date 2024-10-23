@@ -1,4 +1,4 @@
-package com.wsu.ordermasterservice.Repository;
+package com.wsu.ordermasterservice.repository;
 
 import com.example.servers.model.Server;
 import org.springframework.data.jpa.repository.JpaRepository;
