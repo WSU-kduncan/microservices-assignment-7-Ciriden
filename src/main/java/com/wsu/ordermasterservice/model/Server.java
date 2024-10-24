@@ -26,13 +26,13 @@ public class Server {
     @Column(name = "server_id")
     private Integer serverId;
 
-    @Column(name = "server_first_Name")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "server_last_Name")
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "server_availibility")
+    @Column(name = "availability")
     private String availability;
 
 }

@@ -21,7 +21,9 @@ public class ServerController {
     public ResponseEntity<List<ServerDTO>> getAllServers() {
         return ResponseEntity.ok(serverService.getAllServers());
     }
-
+    //http://localhost:8080/ordermaster-service/servers/1
+    //http://localhost:8080/ordermaster-service/servers
+    
     @GetMapping("/{serverId}")
     public ResponseEntity<ServerDTO> getServerById(@PathVariable Integer serverId) {
         return ResponseEntity.ok(serverService.getServerById(serverId));

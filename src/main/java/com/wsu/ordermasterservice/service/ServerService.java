@@ -1,17 +1,13 @@
 package com.wsu.ordermasterservice.service;
 
-import org.springframework.stereotype.Service;
-
 import com.wsu.ordermasterservice.dto.ServerDTO;
 import com.wsu.ordermasterservice.model.Server;
 import com.wsu.ordermasterservice.repository.ServerRepository;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-
 //import static com.wsu.ordermasterservice.utilities.CommonUtils.sort;
-
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
@@ -21,7 +17,13 @@ public class ServerService {
     private final ServerRepository serverRepository;
 
     public List<ServerDTO> getAllServers() {
+    try {
         return serverRepository.findAll().stream().map(this::convertToDTO).toList();
+    
+    } catch (Exception e) {
+        log.error("Failed to retrieve servers. Exception:",e);
+        throw new DatabaseErrorException("Failed to retrieve servers.",  e);
+}
     }
 
     public ServerDTO getServerById(Integer serverId) {
