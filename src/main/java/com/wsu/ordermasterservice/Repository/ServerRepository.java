@@ -1,6 +1,6 @@
 package com.wsu.ordermasterservice.repository;
 
-import com.example.servers.model.Server;
+import com.wsu.ordermasterservice.model.Server;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
