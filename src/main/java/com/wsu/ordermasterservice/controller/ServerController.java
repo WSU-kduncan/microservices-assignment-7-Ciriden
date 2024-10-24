@@ -1,6 +1,6 @@
 package com.wsu.ordermasterservice.controller;
 
-import com.wsu.ordermasterservice.dto.Server.DTO;
+import com.wsu.ordermasterservice.dto.ServerDTO;
 import com.wsu.ordermasterservice.service.ServerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
