@@ -2,14 +2,18 @@
     "configurations": [
       {
         "type": "java",
-        "name": "WorkOrderProServiceApplication",
+        "name": "OrderMasterServiceApplication",
         "request": "launch",
-        "mainClass": "com.wsu.workorderproservice.WorkOrderProServiceApplication",
-        "projectName": "microservices-assignment-1",
+        "mainClass": "com.wsu.ordermasterservice.OrderMasterServiceApplication",
+        "projectName": "microservices-assignment-7-Ciriden",
         "args": "",
         "env": {
           "SERVER_PORT": "8080",
-          "SERVER_CONTEXT_PATH": "/work-order-pro-service"
+          "SERVER_CONTEXT_PATH": "/ordermaster-service",
+          "DATABASE_URL": "jdbc:mariadb://host.docker.internal:3306/ordermaster",
+          "DATABASE_USERNAME": "user",
+          "DATABASE_PASSWORD": "password",
+          "DATABASE_DRIVER": "org.mariadb.jdbc.Driver"
         }
       }
     ]
