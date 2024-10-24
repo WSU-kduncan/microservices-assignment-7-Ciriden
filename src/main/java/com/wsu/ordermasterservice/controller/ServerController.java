@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-// REST Controller for handling Server-related requests
 @RestController
 @RequestMapping("/servers")
 @RequiredArgsConstructor
@@ -16,34 +15,29 @@ public class ServerController {
 
     private ServerService serverService;
 
-    // GET: Retrieve all servers
     @GetMapping
     public ResponseEntity<List<ServerDTO>> getAllServers() {
         return ResponseEntity.ok(serverService.getAllServers());
     }
 
-    // GET: Retrieve a server by ID
-    @GetMapping("/{id}")
-    public ResponseEntity<ServerDTO> getServerById(@PathVariable int id) {
-        return ResponseEntity.ok(serverService.getServerById(id));
+    @GetMapping("/{serverId}")
+    public ResponseEntity<ServerDTO> getServerById(@PathVariable Integer serverId) {
+        return ResponseEntity.ok(serverService.getServerById(serverId));
     }
 
-    // POST: Create a new server
     @PostMapping
     public ResponseEntity<ServerDTO> createServer(@RequestBody ServerDTO serverDTO) {
         return ResponseEntity.ok(serverService.createServer(serverDTO));
     }
 
-    // PUT: Update an existing server
-    @PutMapping("/{id}")
-    public ResponseEntity<ServerDTO> updateServer(@PathVariable int id, @RequestBody ServerDTO serverDTO) {
-        return ResponseEntity.ok(serverService.updateServer(id, serverDTO));
+    @PutMapping("/{serverId}")
+    public ResponseEntity<ServerDTO> updateServer(@PathVariable Integer serverId, @RequestBody ServerDTO serverDTO) {
+        return ResponseEntity.ok(serverService.updateServer(serverId, serverDTO));
     }
 
-    // DELETE: Delete a server by ID
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteServer(@PathVariable int id) {
-        serverService.deleteServer(id);
+    @DeleteMapping("/{serverId}")
+    public ResponseEntity<Void> deleteServer(@PathVariable Integer serverId) {
+        serverService.deleteServer(serverId);
         return ResponseEntity.noContent().build();
     }
 }
