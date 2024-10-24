@@ -24,7 +24,7 @@ public class Server {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "server_id")
-    private int serverId;
+    private Integer serverId;
 
     @Column(name = "server_first_Name")
     private String firstName;
