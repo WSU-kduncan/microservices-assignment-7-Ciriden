@@ -18,8 +18,8 @@ public class ServerService {
         return serverRepository.findAll().stream().map(this::convertToDTO).toList();
     }
 
-    public ServerDTO getServerById(int id) {
-        Server server = serverRepository.findById(id).orElseThrow(() -> new RuntimeException("Server not found"));
+    public ServerDTO getServerById(Integer serverId) {
+        Server server = serverRepository.findById(serverId).orElseThrow(() -> new RuntimeException("Server not found"));
         return convertToDTO(server);
     }
 
@@ -29,19 +29,19 @@ public class ServerService {
         return convertToDTO(server);
     }
 
-    public ServerDTO updateServer(int id, ServerDTO serverDTO) {
-        Server server = serverRepository.findById(id).orElseThrow(() -> new RuntimeException("Server not found"));
+    public ServerDTO updateServer(Integer serverId, ServerDTO serverDTO) {
+        Server server = serverRepository.findById(serverId).orElseThrow(() -> new RuntimeException("Server not found"));
         server.setFirstName(serverDTO.getFirstName());
         server.setLastName(serverDTO.getLastName());
         server.setAvailability(serverDTO.getAvailability());
         return convertToDTO(serverRepository.save(server));
     }
 
-    public void deleteServer(int id) {
-        if (!serverRepository.existsById(id)) {
+    public void deleteServer(Integer serverId) {
+        if (!serverRepository.existsById(serverId)) {
             throw new RuntimeException("Server not found");
         }
-        serverRepository.deleteById(id);
+        serverRepository.deleteById(serverId);
     }
 
     private ServerDTO convertToDTO(Server server) {
