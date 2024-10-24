@@ -1,8 +1,8 @@
 package com.wsu.ordermasterservice.service;
 
-import com.example.servers.dto.ServerDTO;
-import com.example.servers.model.Server;
-import com.example.servers.repository.ServerRepository;
+import com.wsu.ordermasterservice.dto.ServerDTO;
+import com.wsu.ordermasterservice.model.Server;
+import com.wsu.ordermasterservice.repository.ServerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import static com.wsu.ordermasterservice.utilities.CommonUtils.sort;
