@@ -1,11 +1,17 @@
-package com.wsu.ordermasterservice.service;
+package com.wsu.ordermasterservice.Service;
 
-import com.wsu.ordermasterservice.dto.ServerDTO;
-import com.wsu.ordermasterservice.model.Server;
-import com.wsu.ordermasterservice.repository.ServerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import static com.wsu.ordermasterservice.utilities.CommonUtils.sort;
+
+import com.wsu.ordermasterservice.DTO.ServerDTO;
+import com.wsu.ordermasterservice.Model.Server;
+import com.wsu.ordermasterservice.Repository.ServerRepository;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+//import static com.wsu.ordermasterservice.utilities.CommonUtils.sort;
+
+import java.util.List;
 
 @Service
 @Slf4j

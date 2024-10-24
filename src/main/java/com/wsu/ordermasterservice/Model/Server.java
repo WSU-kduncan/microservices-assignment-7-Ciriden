@@ -1,4 +1,4 @@
-package com.wsu.ordermasterservice.model;
+package com.wsu.ordermasterservice.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

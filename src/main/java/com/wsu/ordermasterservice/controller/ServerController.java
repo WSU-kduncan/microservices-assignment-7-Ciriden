@@ -1,10 +1,10 @@
 package com.wsu.ordermasterservice.controller;
 
-import com.wsu.ordermasterservice.dto.ServerDTO;
-import com.wsu.ordermasterservice.service.ServerService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.wsu.ordermasterservice.DTO.ServerDTO;
+import com.wsu.ordermasterservice.Service.ServerService;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 

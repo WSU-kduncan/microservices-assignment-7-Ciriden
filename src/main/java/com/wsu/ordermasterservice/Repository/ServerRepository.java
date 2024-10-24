@@ -1,8 +1,7 @@
-package com.wsu.ordermasterservice.repository;
+package com.wsu.ordermasterservice.Repository;
 
-import com.wsu.ordermasterservice.model.Server;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import com.wsu.ordermasterservice.Model.Server;
 
 public interface ServerRepository extends JpaRepository<Server, Integer> {
 

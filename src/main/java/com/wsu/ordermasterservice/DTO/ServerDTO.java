@@ -1,6 +1,5 @@
-package com.wsu.ordermasterservice.dto;
+package com.wsu.ordermasterservice.DTO;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
