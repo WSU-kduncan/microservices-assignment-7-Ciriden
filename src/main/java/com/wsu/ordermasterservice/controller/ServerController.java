@@ -8,12 +8,12 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/servers")
-@RequiredArgsConstructor
 public class ServerController {
 
-    private ServerService serverService;
+    private final ServerService serverService;
 
     @GetMapping
     public ResponseEntity<List<ServerDTO>> getAllServers() {
