@@ -1,10 +1,10 @@
-package com.wsu.ordermasterservice.Service;
+package com.wsu.ordermasterservice.service;
 
 import org.springframework.stereotype.Service;
 
-import com.wsu.ordermasterservice.DTO.ServerDTO;
-import com.wsu.ordermasterservice.Model.Server;
-import com.wsu.ordermasterservice.Repository.ServerRepository;
+import com.wsu.ordermasterservice.dto.ServerDTO;
+import com.wsu.ordermasterservice.model.Server;
+import com.wsu.ordermasterservice.repository.ServerRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

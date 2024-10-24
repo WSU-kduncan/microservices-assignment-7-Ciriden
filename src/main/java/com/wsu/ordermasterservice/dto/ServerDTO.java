@@ -1,4 +1,4 @@
-package com.wsu.ordermasterservice.DTO;
+package com.wsu.ordermasterservice.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

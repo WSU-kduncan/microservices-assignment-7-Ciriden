@@ -2,8 +2,10 @@ package com.wsu.ordermasterservice.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.wsu.ordermasterservice.DTO.ServerDTO;
-import com.wsu.ordermasterservice.Service.ServerService;
+
+import com.wsu.ordermasterservice.dto.ServerDTO;
+import com.wsu.ordermasterservice.service.ServerService;
+
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
